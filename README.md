@@ -10,6 +10,8 @@ steps to do it:
 5. return the result list.
 6. And return the size of the result list as the answer.
 
-Time Complexity: O(n log n)
-Space Complexity: O(n)
+LEETCODE QUESTION 646: https://leetcode.com/problems/maximum-length-of-pair-chain/
+
+Time Complexity: O(n log n) 
+Space Complexity: O(n) 
 Status: Its done but needs revision about 2d array methods and Greedy search algorithm
