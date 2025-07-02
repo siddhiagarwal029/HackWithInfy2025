@@ -29,23 +29,28 @@ public class prblm1_activitySelection {
         for(int i = 0; i < n; i++) {
             int start = sc.nextInt();
             int end = sc.nextInt();
-            if (start < end) {
-                activityList.add(new int[]{start, end});
+            if (start != end) {
+                activityList.add(new int[]{start, end}); // Add activity only if start and end are not equal
+            }
+            else {
+            System.out.println("Invalid activity: [" + start + ", " + end + "] Skipped.");
             }
         }
         int[][] activities = activityList.toArray(new int[0][0]);
-        Arrays.sort(activities, Comparator.comparingInt(a -> a[1]));
+        Arrays.sort(activities, (a, b) -> Integer.compare(a[1], b[1])); //sort the 2D array by 2nd index using lambda expression
         for (int[] activity : activities) {
             System.out.println(Arrays.toString(activity));
         } 
         int count = 1;
         int lastend = activities[0][1];
-        for(int i=1;i<n;i++) {
-            if(activities[i][0]>=lastend){
-                count++;
-                lastend=activities[i][1];
-            }
-}
+        System.out.println("Selected activity: " + Arrays.toString(activities[0]));
+        for (int i = 1; i < activities.length; i++) {
+        if (activities[i][0] >= lastend) {
+        System.out.println("Selected activity: " + Arrays.toString(activities[i]));
+        count++;
+        lastend = activities[i][1];
+        }
+    }
         System.out.println(count);
         sc.close();
 }
