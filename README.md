@@ -9,6 +9,7 @@ steps to do it:
 4. if it can be done then add it to the result list and update the end time of the last.
 5. return the result list.
 6. And return the size of the result list as the answer.
+
 Time Complexity: O(n log n)
 Space Complexity: O(n)
 Status: Its done but needs revision about 2d array methods and Greedy search algorithm
